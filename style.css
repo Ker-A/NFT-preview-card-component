@@ -67,12 +67,11 @@ span:hover{
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
-    cursor: pointer;
 }
 .tipeimg1{
     width: 100%;
     border-radius: 10px;
-
+    cursor: pointer;
     position: relative;
 }
 .tipeimg2{
