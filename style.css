@@ -1,0 +1,119 @@
+:root{
+    --noIdea: hsl(215, 51%, 70%);
+    --Activation: hsl(178, 100%, 50%);
+    --Fondo1: hsl(217, 54%, 11%);
+    --FondoCard: hsl(216, 50%, 16%);
+    --Letters: hsl(215, 32%, 27%);
+    --Titles: hsl(0, 0%, 100%);
+}
+body{
+    background-color: var(--Fondo1);
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/**TXT*/
+h1{
+    color: var(--Titles);
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+h1:hover{
+    color: var(--Activation);
+}
+p{
+    color: var(--noIdea);
+    font-size: 16px;
+    font-weight: 300; 
+}
+h2{
+    color: var(--Activation);
+    font-size: 16px;
+    font-weight: 300; 
+}
+hr{
+    border: 1px solid var(--noIdea);
+    margin: 10px 0;
+}
+span{
+    color: var(--Titles);
+    cursor: pointer;
+}
+span:hover{
+    color: var(--Activation);
+}
+
+/**Class*/
+.alineacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.alineacion1{
+    display: flex;
+    align-items: center;
+}
+.container{
+    background-color: var(--FondoCard);
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.tipeimg1{
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.tipeimg2{
+    width: 10px;
+    height: 20px;
+    margin-right: 5px;
+}
+.tipeimg3{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.tipeimg4 {
+    position: absolute;
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Centrar correctamente */
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.3s ease-in-out;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+}
+
+
+.image-container:hover .tipeimg4 {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(178, 100%, 50%); /* Color azul brillante */
+    opacity: 0; /* Oculta la capa inicialmente */
+    transition: opacity 0.3s ease-in-out; /* Transición suave */
+    z-index: 1;
+}
+
+.image-container:hover .overlay {
+    opacity: 0.5; /* Muestra el fondo azul con opacidad */
+    filter: none;
+}
